@@ -1,7 +1,9 @@
 const NavBar = () => {
     return (  
         <>
-        <p>this is where the NavBar would go</p>
+        <p className="text-3xl font-bold underline">
+            This is the navbar
+        </p>
         </>
     );
 }
