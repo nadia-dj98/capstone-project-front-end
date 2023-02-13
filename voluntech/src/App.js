@@ -5,6 +5,8 @@ import JobContainer from './containers/JobContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Partners from "./components/Partners";
+import { useState } from 'react';
+import { createContext } from 'react';
 // import Login from "./components/Login";
 // import Login from "./components/Register";
 
