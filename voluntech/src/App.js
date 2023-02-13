@@ -8,17 +8,21 @@ import Partners from "./components/Partners";
 // import Login from "./components/Login";
 // import Login from "./components/Register";
 
+export const UserContext = createContext(null)
+
 function App() {
 
-  // Create a state for user - starts off as null
-  // Using UseContext, we will pass down "user" 
+  // Create a state for user - starts off as null - done
+  const [user, setUser] = useState(null);
+
+  // Using UseContext, we will pass down "user" - done
 
   return (
    <>
    
   <BrowserRouter>
 
-    {/* UserContext.provider */}
+    <UserContext.Provider value = {[user, setUser]}>
     <NavBar/>
 
     <Routes>
@@ -39,7 +43,7 @@ function App() {
     <Partners/>
     
     <Footer/>
-    {/* UserContext.provider */}
+    </UserContext.Provider>
 
   </BrowserRouter>
     
