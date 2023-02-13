@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import JobList from "../components/JobList";
-
+import Hero from "../components/Hero";
+import Partners from "../components/Partners";
 
 const JobContainer = () => {
     
@@ -19,9 +20,11 @@ useEffect (() => {
     
     return (  
         <>
-   <JobList jobs ={jobs}/>
-           
+        <Hero/>
+        
+        <JobList jobs ={jobs}/>
             
+        <Partners/>
         </>
     );
 }
