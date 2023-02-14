@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { UserContext } from "../App";
 
-const JobForm = ({jobs, setJobs}) => {
+const JobForm = ({chosenCharity}) => {
 
     const [user, setUser] = useContext(UserContext);
 
@@ -15,25 +15,25 @@ const JobForm = ({jobs, setJobs}) => {
 
     
     const postNewJob = (newJob) => {
-        fetch(`http://localhost:8080/jobs`, {
+        fetch(`http://localhost:8080/charities/${chosenCharity.id}/jobs`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(newJob),
         })
-        .then((response) =>response.json())
-        .then((response)=> {
-        setJobs([...jobs,response]);
-        })
+        // .then((response) =>response.json())
+        // .then((response)=> {
+        // setJobs([...jobs,response]);
+    // })
     }
 
     const handleFormSubmit = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         postNewJob({role, description, startDate, endDate, location});
-        setRole("");
-        setDescription("");
-        setStartDate("");
-        setEndDate("");
-        setLocation("");
+        // setRole("");
+        // setDescription("");
+        // setStartDate("");
+        // setEndDate("");
+        // setLocation("");
         // setCharity(0);
     }
 

@@ -10,6 +10,8 @@ import { useState, useEffect } from 'react';
 import { createContext } from 'react';
 import JobForm from './components/JobForm';
 import CharityContainer from './containers/CharityContainer';
+import { useParams } from 'react-router';
+import ChosenCharity from './components/ChosenCharity';
 // import Login from "./components/Login";
 // import Login from "./components/Register";
 
@@ -40,6 +42,7 @@ function App() {
     })
 },[]);
 
+
   return (
    <>
    
@@ -60,6 +63,11 @@ function App() {
         />
         <Route path= "/charities" element =
         {<CharityContainer jobs={jobs}/>}
+        />
+
+        <Route exact path = "/charities/:id" element = {
+          <ChosenCharity/>
+        }
         />
         {/* <Route path="/login" element=
         {<Login/>}
