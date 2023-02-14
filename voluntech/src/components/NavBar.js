@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const NavBar = ({jobs}) => {
+const NavBar = ({}) => {
 
     // Get user from UseContext
     // If the user is not null (charity or volunteer), then render the "log out" and "welcome message"
@@ -22,6 +22,8 @@ const NavBar = ({jobs}) => {
                   <li>  <Link to= "/about">About</Link></li>
                   <li>  <Link to="/jobs">Jobs</Link> </li>
                   <li>  <Link to="/partners">Partners</Link></li>
+                  <li>  <Link to="/charities">Charities</Link></li>
+
               </ul>
               </div>
                 
@@ -34,10 +36,6 @@ const NavBar = ({jobs}) => {
                 
                 <button className='px-8 py-3'>
                     <Link to="/Signup">Sign up</Link>
-                </button>
-
-                <button className='px-8 py-3'>
-                    <Link to="/postjob">Post Job</Link>
                 </button>
 
                 </div>

@@ -9,6 +9,7 @@ import Partners from "./components/Partners";
 import { useState, useEffect } from 'react';
 import { createContext } from 'react';
 import JobForm from './components/JobForm';
+import CharityContainer from './containers/CharityContainer';
 // import Login from "./components/Login";
 // import Login from "./components/Register";
 
@@ -45,10 +46,9 @@ function App() {
   <BrowserRouter>
 
     <UserContext.Provider value = {[user, setUser]}>
-    <NavBar jobs={jobs}/>
+    <NavBar/>
 
     <Routes>
-
         <Route path= "/home" element = 
         {<Home/>}
         />
@@ -58,8 +58,8 @@ function App() {
         <Route path= "/jobs" element =
         {<JobContainer jobs={jobs}/>}
         />
-        <Route path= "/postjob" element = 
-        {<JobForm/>}
+        <Route path= "/charities" element =
+        {<CharityContainer jobs={jobs}/>}
         />
         {/* <Route path="/login" element=
         {<Login/>}
