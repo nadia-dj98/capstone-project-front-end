@@ -4,9 +4,12 @@ import Footer from './components/Footer';
 import JobContainer from './containers/JobContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
+import Home from "./components/Home";
 import Partners from "./components/Partners";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createContext } from 'react';
+import JobForm from './components/JobForm';
+import CharityContainer from './containers/CharityContainer';
 // import Login from "./components/Login";
 // import Login from "./components/Register";
 
@@ -14,10 +17,28 @@ export const UserContext = createContext(null)
 
 function App() {
 
-  // Create a state for user - starts off as null - done
   const [user, setUser] = useState(null);
 
-  // Using UseContext, we will pass down "user" - done
+ 
+  const [jobs, setJobs] = useState([]);
+
+    useEffect (() => {
+        fetch("http://localhost:8080/jobs")
+        .then(response => response.json())
+        .then(response => {
+            setJobs(response)
+        })
+    },[]);
+    
+
+
+  useEffect (() => {
+    fetch("http://localhost:8080/jobs")
+    .then(response => response.json())
+    .then(response => {
+        setJobs(response)
+    })
+},[]);
 
   return (
    <>
@@ -28,11 +49,17 @@ function App() {
     <NavBar/>
 
     <Routes>
+        <Route path= "/home" element = 
+        {<Home/>}
+        />
         <Route path= "/about" element =
         {<About/>}
         />
-        <Route path= "/jobs" element=
-        {<JobContainer/>}
+        <Route path= "/jobs" element =
+        {<JobContainer jobs={jobs}/>}
+        />
+        <Route path= "/charities" element =
+        {<CharityContainer jobs={jobs}/>}
         />
         {/* <Route path="/login" element=
         {<Login/>}
@@ -42,7 +69,7 @@ function App() {
         /> */}
     </Routes>
 
-    <Partners/>
+    
     
     <Footer/>
     </UserContext.Provider>
