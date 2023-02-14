@@ -1,5 +1,7 @@
 import JobForm from "./JobForm";
 import JobList from "./JobList";
+import { Link } from "react-router-dom";
+
 
 const Charity = ({charity, jobs}) => {
     return ( 
@@ -9,8 +11,11 @@ const Charity = ({charity, jobs}) => {
                     <p>Charity Name: {charity.name}</p>
                     <p>Description: {charity.description}</p>
                     <p>Cause: {charity.cause} </p>
+                    <button>
+                    <Link className="linkbutton" to={`/charities/${charity.id}`} >Post Job</Link>
+            </button>
                 </div>
-                <JobForm jobs={jobs}/>
+                {/* <JobForm jobs={jobs}/> */}
 
             </div>
         </>
