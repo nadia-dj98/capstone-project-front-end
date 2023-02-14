@@ -11,7 +11,7 @@ const JobForm = ({}) => {
     const [startDate, setStartDate] = useState("");
     const [endDate, setEndDate] = useState("");
     const [location, setLocation] = useState("");
-    const [charity, setCharity] = useState("");
+    const [charity, setCharity] = useState(0);
 
     
     const postNewJob = (newJob) => {
@@ -34,7 +34,7 @@ const JobForm = ({}) => {
         setStartDate("");
         setEndDate("");
         setLocation("");
-        setCharity("");
+        setCharity(0);
     }
 
 
@@ -80,10 +80,10 @@ const JobForm = ({}) => {
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 />         
-            <h2>Input your charity name:</h2>
+            <h2>Input your charity id:</h2>
             <input 
                 className="" 
-                type = "text" 
+                type = "number" 
                 placeholder="Charity"
                 value={charity}
                 onChange={(e) => setCharity(e.target.value)}
