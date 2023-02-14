@@ -1,6 +1,6 @@
 import Charity from "./Charity";
 
-const CharityList = ({charities, jobs}) => {
+const CharityList = ({charities }) => {
     
     const charityComponents = charities.map(charity => {
         return <Charity key={charity.id} charity={charity} />}

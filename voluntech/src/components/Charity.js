@@ -10,10 +10,12 @@ const Charity = ({charity, jobs}) => {
                 <div className="charity">
                     <p>Charity Name: {charity.name}</p>
                     <p>Description: {charity.description}</p>
-                    <p>Cause: {charity.cause} </p>
-                    <button>
-                    <Link className="linkbutton" to={`/charities/${charity.id}`} >Post Job</Link>
-            </button>
+                    <p>Cause: {charity.charityCause} </p>
+                    <Link to={`/charities/${charity.id}`} > 
+                        <button>Post Job</button> 
+                    </Link>
+                
+                    
                 </div>
                 {/* <JobForm jobs={jobs}/> */}
 
