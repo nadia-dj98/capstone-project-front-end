@@ -5,16 +5,6 @@ import Partners from "../components/Partners";
 
 const JobContainer = ({jobs}) => {
     
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 908ce3a7dcb4450aa36de41f26a43c374c9f8ccd
-
-
-    
-    
     return (  
         <>
        
