@@ -2,7 +2,6 @@ import JobForm from "./JobForm";
 import JobList from "./JobList";
 import { Link } from "react-router-dom";
 
-
 const Charity = ({charity, jobs}) => {
     return ( 
         <>
@@ -12,7 +11,7 @@ const Charity = ({charity, jobs}) => {
                     <p>Description: {charity.description}</p>
                     <p>Cause: {charity.charityCause} </p>
                     <Link to={`/charities/${charity.id}`} > 
-                        <button>Post Job</button> 
+                        <button>Charity profile</button> 
                     </Link>
                 
                     

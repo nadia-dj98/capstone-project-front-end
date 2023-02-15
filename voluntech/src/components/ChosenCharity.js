@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import JobForm from "./JobForm";
+import Job from "./Job";
 
 //map jobs to show all jobs for this particular charity (like how we've done previously)
 //need conditional rendering - (or else will show undefined.name) - because the info you're trying to use in this component does not exist when the page is loaded
 //whenever you have fetch request/asyn, this is when you need to use conditional rendering 
 
-const ChosenCharity = () => {
+const ChosenCharity = ({charity}) => {
     let {id} = useParams();
     const [chosenCharity, setChosenCharity] = useState([]);
     useEffect(() => {
@@ -15,7 +16,24 @@ const ChosenCharity = () => {
         .then(response => {
             setChosenCharity(response)
         })
-    }, [id])
+    }, [id]);
+
+    const [specificCharityJobs, setSpecificCharityJobs] = useState([]);
+    
+    const [chosenCharityJobs, setChosenCharityJobs] = useState([]);
+
+    useEffect(() => {
+        if (chosenCharity.jobs){
+        setSpecificCharityJobs(chosenCharity.jobs)}
+    }, [chosenCharity]);
+
+    useEffect(() => {
+        if (specificCharityJobs.length){
+        setChosenCharityJobs(specificCharityJobs.map((job) => {
+            return <Job key={job.id} job={job}/>}
+       ))}
+    }, [specificCharityJobs]);
+
     return (
     <>
    <h1>Hello</h1> 
@@ -23,6 +41,8 @@ const ChosenCharity = () => {
    <p>{chosenCharity.description}</p>
    <p>{chosenCharity.charityCause}</p>
     <JobForm chosenCharity = {chosenCharity}/>
+    <p>Job listings</p>
+    {chosenCharityJobs ?  <ul>{chosenCharityJobs}</ul> : <p>No jobs available</p>}
     </>
     );
 

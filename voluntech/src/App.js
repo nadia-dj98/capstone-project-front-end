@@ -64,9 +64,8 @@ function App() {
         <Route path= "/charities" element =
         {<CharityContainer jobs={jobs}/>}
         />
-
         <Route exact path = "/charities/:id" element = {
-          <ChosenCharity/>
+          <ChosenCharity jobs={jobs}/>
         }
         />
         {/* <Route path="/login" element=
