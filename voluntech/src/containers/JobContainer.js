@@ -10,8 +10,6 @@ const JobContainer = ({jobs}) => {
        
         
         <JobList jobs ={jobs}/>
-            
-        <Partners/>
         </>
     );
 }

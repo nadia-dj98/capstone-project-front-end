@@ -6,7 +6,6 @@ const Home = () => {
         <>
          <Hero/>
          <Partners/>
-         <p>This is where the Home Page should be ideally!</p>
         </>
      );
 }
