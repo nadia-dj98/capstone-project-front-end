@@ -8,8 +8,11 @@ import Job from "./Job";
 //whenever you have fetch request/asyn, this is when you need to use conditional rendering 
 
 const ChosenCharity = ({charity}) => {
+    
     let {id} = useParams();
+    
     const [chosenCharity, setChosenCharity] = useState([]);
+    
     useEffect(() => {
         fetch(`http://localhost:8080/charities/${id}`)
         .then(response => response.json())
@@ -36,13 +39,47 @@ const ChosenCharity = ({charity}) => {
 
     return (
     <>
-   <h1>Hello</h1> 
-   <p>{chosenCharity.name}</p>
-   <p>{chosenCharity.description}</p>
-   <p>{chosenCharity.charityCause}</p>
+    <p>{chosenCharity.name}</p>
+    <p>{chosenCharity.description}</p>
+    <p>{chosenCharity.charityCause}</p>
     <JobForm chosenCharity = {chosenCharity}/>
     <p>Job listings</p>
     {chosenCharityJobs ?  <ul>{chosenCharityJobs}</ul> : <p>No jobs available</p>}
+
+    {chosenCharity.map((job) => {
+        return(
+            <ul>
+                {job.volunteers.map((volunteer) => {
+                    return(
+                        <>
+                        <li key={volunteer.id}>Name: {volunteer.name}</li>
+                        <li key={volunteer.id}>Experience: {volunteer.experience}</li>
+                        </>
+                    )
+                })}
+            </ul>
+    )
+    })}
+
+
+    
+    {/* // {
+    //     cakes.map((cake, index) => {
+    //         return(
+    //             <div key={index}>
+    //                 <h3>{cake.cakeName}</h3>
+    //                 <ul>
+    //                     {cake.ingredients.map((ingredient, index) => {
+    //                         return(
+    //                             <li key={index}>{ingredient}</li>
+    //                         )
+    //                     })}
+    //                 </ul>
+    //             </div>
+    //         )
+    //     })
+    // } */}
+
     </>
     );
 
