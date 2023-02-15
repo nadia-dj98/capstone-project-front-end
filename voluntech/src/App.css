@@ -1,4 +1,12 @@
-.job-form {
-  margin: 80px;
-  padding: 100px
+.main-footer {
+  background-color: rgb(29, 29, 30);
+  color: white;
+  padding-top: 3em;
+  position: relative;
+  bottom:0;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
 }

@@ -8,8 +8,8 @@ const JobList = ({jobs}) => {
     
     return ( 
         <>
-
-        <div className="grid md:grid-cols-3 gap-1 px-2 ">
+        <p className="text-2xl font-bold gap-1 text-center leading-loose">Opportunites</p>
+        <div className="grid md:grid-cols-3 gap-1 px-2" style={{height: '100vh'}}>
             {jobComponents}
         </div>
         </>

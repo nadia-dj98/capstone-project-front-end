@@ -39,7 +39,7 @@ const JobForm = ({chosenCharity}) => {
 
 
     return ( 
-        <form onSubmit={handleFormSubmit} className="job-form">
+        <form onSubmit={handleFormSubmit} className="job-form name-card shadow-lg rounded-xl border-2 px-5 py-5 border-black overflow-y-scroll w-96" style={{height: '30vh', width: '30vh'}}>
             <h2>Input your role:</h2>
             <input className="" 
                 type = "text" 
@@ -80,18 +80,8 @@ const JobForm = ({chosenCharity}) => {
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 />         
-            {/* <h2>Input your charity id:</h2>
-            <input 
-                className="" 
-                type = "number" 
-                placeholder="Charity"
-                value={charity}
-                onChange={(e) => setCharity(e.target.value)}
-                /> */}
             <button id="submit-job" type="submit">Submit</button>
         </form>
-
-
     );
         
 }
