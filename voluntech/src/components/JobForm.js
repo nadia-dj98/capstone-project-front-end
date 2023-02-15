@@ -27,7 +27,7 @@ const JobForm = ({chosenCharity}) => {
     }
 
     const handleFormSubmit = (event) => {
-        // event.preventDefault();
+     
         postNewJob({role, description, startDate, endDate, location});
         // setRole("");
         // setDescription("");
