@@ -1,8 +1,8 @@
 const Job = ({job}) => {
     return (  
         <>
-        <div className="name-card">
-            <div className="job">
+        <div className="">
+            <div className="">
                 <p>Role: {job.role}</p>
                 {job.charity ? <p>Charity: {job.charity.name}</p> : ""}
                 <p>Description: {job.description}</p>

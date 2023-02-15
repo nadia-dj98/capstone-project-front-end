@@ -9,8 +9,8 @@ const JobList = ({jobs}) => {
     return ( 
         <>
         <h2>List of jobs</h2>
-        <div>
-        {jobComponents}
+        <div className="grid md:grid-cols-3 gap-1 px-2 ">
+            {jobComponents}
         </div>
         </>
      );
