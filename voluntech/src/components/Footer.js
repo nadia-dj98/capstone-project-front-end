@@ -1,25 +1,13 @@
 const Footer = () => {
     return ( 
         <>
-        <div class="main-footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <h4>VolunTech</h4>
-                        <ul>London, United Kingdom</ul>
-                    </div>
-                    <div className="col">
-                        <ul>Instagram: voluntech</ul>
-                        <ul>Twitter: @voluntech</ul>
-                    </div>
-                </div>
-                <hr />
-             <div className="row">
-                   &copy;{new Date().getFullYear()} VolunTech | All rights reserved | Terms of Service | Privacy
-            </div>   
-        </div>
-    </div>  
-
+        <div clasName="flex flex-col h-screen justify-between">
+        
+            <footer className="w-full h-15 bg-black text-center text-white fixed bottom-0">
+                &copy;{new Date().getFullYear()} VolunTech | CRUD First Girls
+            </footer> 
+        
+        </div> 
         </>
      );
 }

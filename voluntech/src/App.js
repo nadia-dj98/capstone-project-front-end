@@ -12,8 +12,8 @@ import JobForm from './components/JobForm';
 import CharityContainer from './containers/CharityContainer';
 import { useParams } from 'react-router';
 import ChosenCharity from './components/ChosenCharity';
-// import Login from "./components/Login";
-// import Login from "./components/Register";
+import LoginPage from "./pages/Login";
+import SignupPage from "./pages/Signup";
 
 export const UserContext = createContext(null)
 
@@ -68,15 +68,13 @@ function App() {
           <ChosenCharity jobs={jobs}/>
         }
         />
-        {/* <Route path="/login" element=
-        {<Login/>}
+        <Route path="/login" element=
+        {<LoginPage/>}
         />
-        <Route path="/register" element=
-        {<Register/>}
-        /> */}
+        <Route path="/signup" element=
+        {<SignupPage/>}
+        />
     </Routes>
-
-    
     
     <Footer/>
     </UserContext.Provider>
