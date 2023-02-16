@@ -1,4 +1,9 @@
-import bgImg from './assets/pair.png';
+import cause from './assets/cause.png';
+import pair from './assets/pair.png';
+import collab_bubble from './assets/collab_bubble.png';
+import collab_wheelchair from './assets/collab_wheelchair.png';
+import shared_goals from './assets/shared_goals.png';
+import get_hired from './assets/get_hired.png';
 const About = () => {
     return ( 
         <>
@@ -11,21 +16,22 @@ const About = () => {
                      
                      <div className='grid md:grid-cols-3 gap-1 px-2'>
                         <div className=' py-8 '>
-                        <p className='text-4xl font-bold text-indigo-600'>1. Find a cause </p>
                         
-                      <img class="rounded-full w-96 h-96" src={bgImg} alt="image description">
+                        
+                      <img class="w-80 h-80" src={cause} alt="image description">
                         </img>
+                        <p className='text-4xl font-bold text-indigo-600'>1. Find a cause </p>
 
                      </div>
                      <div className=' py-8 '>
-                        <p className='text-4xl font-bold text-indigo-600'>2. Make a difference</p>
-                        <img class="rounded-full w-96 h-96" src={bgImg} alt="image description">
+                        <img class="w-85 h-80" src={shared_goals} alt="image description">
                         </img>
+                        <p className='text-4xl font-bold text-indigo-600'>2. Make a difference</p>
                      </div>
                      <div className=' py-8 '>
-                        <p className='text-4xl font-bold text-indigo-600'>3. Get hired</p>
-                        <img class="rounded-full w-96 h-96" src={bgImg} alt="image description">
+                        <img class="rounded-full w-85 h-80" src={get_hired} alt="image description">
                         </img>
+                        <p className='text-4xl font-bold text-indigo-600'>3. Get hired</p>
                      </div>
             </div>
         </div>

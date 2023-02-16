@@ -12,8 +12,14 @@ import JobForm from './components/JobForm';
 import CharityContainer from './containers/CharityContainer';
 import { useParams } from 'react-router';
 import ChosenCharity from './components/ChosenCharity';
+<<<<<<< HEAD
 import LoginPage from "./pages/Login";
 import SignupPage from "./pages/Signup";
+=======
+// import "./components/assets/Poppins"
+// import Login from "./components/Login";
+// import Login from "./components/Register";
+>>>>>>> main
 
 export const UserContext = createContext(null)
 
