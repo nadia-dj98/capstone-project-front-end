@@ -19,3 +19,12 @@
    url("/src/components/assets/Poppins/Poppins-Medium.ttf") format ("truetype");
 }
 
+
+.name-car::-webkit-scrollbar {
+  display: hidden;
+}
+
+.scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

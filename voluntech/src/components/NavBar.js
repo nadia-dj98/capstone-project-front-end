@@ -27,9 +27,10 @@ const NavBar = ({}) => {
                   <li>  <Link to="/home">Home</Link> </li> 
                   {/* <li>  <Link to= "/about">About</Link></li> */}
                   <li>About</li>
+                  <li>Partners</li>
                   <li>  <Link to="/jobs">Jobs</Link> </li>
                   {/* <li>  <Link to="/partners">Partners</Link></li> */}
-                  <li>Partners</li>
+                  
                   <li>  <Link to="/charities">Charities</Link></li>
 
               </ul>
@@ -58,9 +59,10 @@ const NavBar = ({}) => {
                     <li className='border-b-2 border-zinc-300 w-full'>  <Link to="/home">Home</Link> </li> 
                   {/* <li>  <Link to= "/about">About</Link></li> */}
                   <li className='border-b-2 border-zinc-300 w-full'>About</li>
+                  <li className='border-b-2 border-zinc-300 w-full'>Partners</li>
                   <li className='border-b-2 border-zinc-300 w-full'>  <Link to="/jobs">Jobs</Link> </li>
                   {/* <li>  <Link to="/partners">Partners</Link></li> */}
-                  <li className='border-b-2 border-zinc-300 w-full'>Partners</li>
+                  
                   <li className='border-b-2 border-zinc-300 w-full'>  <Link to="/charities">Charities</Link></li>
                   
                   <div className="flex flex-col my-4">

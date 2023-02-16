@@ -48,7 +48,7 @@ const ChosenCharity = ({charity}) => {
     <p className="text-xl font-bold gap-1 text-center leading-loose">Add a listing</p>
     <JobForm chosenCharity = {chosenCharity}/>
 
-    <p className="text-xl font-bold gap-1 text-center leading-loose">Current listings</p>
+    <p className="text-xl font-bold gap-1 text-center leading-loose overflow-y-auto">Current listings</p>
     {chosenCharityJobs ?  <ul>{chosenCharityJobs}</ul> : <p>No jobs available</p>}
     </div>
     </div>
