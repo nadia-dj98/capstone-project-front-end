@@ -25,11 +25,11 @@ const NavBar = () => {
             <ul className='hidden md:flex'>
 
     
-                  <li>  <Link to="/home">Home</Link> </li> 
-                  <li><a href="#about-section">About</a></li>
-                  <li><a href="#partners-section">Partners</a></li>
-                  <li>  <Link to="/jobs">Jobs</Link> </li>
-                  <li>  <Link to="/charities">Charities</Link></li>
+                  <li> <Link to="/home" className="hover:underline hover:decoration-4">Home</Link> </li> 
+                  <li ><a href="#about-section" className="hover:underline hover:decoration-4">About</a></li>
+                  <li><a href="#partners-section" className="hover:underline hover:decoration-4">Partners</a></li>
+                  <li>  <Link to="/jobs" className="hover:underline hover:decoration-4">Jobs</Link> </li>
+                  <li>  <Link to="/charities" className="hover:underline hover:decoration-4">Charities</Link></li>
 
               </ul>
               </div>

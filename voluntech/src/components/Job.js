@@ -30,19 +30,23 @@ const Job = ({job, showVolunteers}) => {
                 
                 {monthsDiff > 1 ? <span class="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">{monthsDiff} months</span> : <span class="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">{monthsDiff} month</span>  }
 
-                <div class="flex mt-4 space-x-3 md:mt-6">
+                <div class="flex mt-4 space-x-3 md:mt-6 pb-5">
                 <form className="text-center ">
                     <button onClick={applyToJob}>Apply</button>
                 </form>
                 </div>
 
+                {job.volunteers && job.volunteers.length > 0 ? <p className="font-bold text-lg	">Applicants:</p> : <p> No current applicants</p>}
                 {showVolunteers ? <ul>
                 {job.volunteers.map((volunteer, index) => {
                     return(
-                        <li key={index}>
-                        Name: {volunteer.name}<br/>
-                        Experience: {volunteer.experience}
-                        </li>
+                        <>
+                            <li key={index}>
+                                <span className="font-bold">Name:</span> {volunteer.name}<br/>
+                                <span className="font-bold">Experience:</span> {volunteer.experience}
+                            </li>
+                            <hr/>
+                        </>
                     )
                 })}
                 </ul> : ""}

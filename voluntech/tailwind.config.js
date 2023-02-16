@@ -17,6 +17,11 @@ module.exports = {
 
 
     },
+    extend: {
+      colors: {
+        'blueish': '#6e63ff',
+      },
+    }
   },
   plugins: [],
 }
