@@ -39,15 +39,16 @@ const JobForm = ({chosenCharity}) => {
 
 
     return ( 
-        <form onSubmit={handleFormSubmit} className="job-form name-card shadow-lg rounded-xl border-2 px-5 py-5 border-black overflow-y-scroll w-96" style={{height: '30vh', width: '30vh'}}>
-            <h2>Input your role:</h2>
-            <input className="" 
+        <form onSubmit={handleFormSubmit} className="job-form name-card shadow-lg rounded-xl border-2 px-5 py-5 border-black overflow-y-scroll w-96" style={{height: '30vh', width: '100%'}}>
+            <h2 className="font-bold">Role:</h2>
+            <input className="rounded-xl border-2 px-1 py-1 border-black m-1" style={{width: '80%'}}
                 type = "text" 
                 placeholder="Role"
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 />
-            <input  
+            <div> 
+            <input className="rounded-xl border-2 px-1 py-1 border-black m-1" style={{height: '10vh', width: '80%'}}
                 id="text-area"
                 type = "text"
                 rows="5"
@@ -56,7 +57,8 @@ const JobForm = ({chosenCharity}) => {
                 value = {description}
                 onChange={(e) => setDescription(e.target.value)}
             />
-            <h3>Start Date:</h3>
+            </div>
+            <h3 className="font-bold">Start date:</h3>
             <input
                 id ="startDate"
                 type="date"
@@ -64,7 +66,7 @@ const JobForm = ({chosenCharity}) => {
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
             /> 
-            <h3>End Date:</h3>
+            <h3 className="font-bold">End date:</h3>
             <input
                 id ="endDate"
                 type="date"
@@ -72,18 +74,16 @@ const JobForm = ({chosenCharity}) => {
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
             />       
-            <h2>Input job location:</h2>
-            <input 
-                className="" 
+            <h2 className="font-bold">Location:</h2>
+            <input className="rounded-xl border-2 px-1 py-1 border-black m-1" 
                 type = "text" 
                 placeholder="Location"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 />         
-            <button id="submit-job" type="submit">Submit</button>
+            <button>Submit</button>
         </form>
     );
-        
 }
  
 export default JobForm;

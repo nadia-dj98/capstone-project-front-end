@@ -42,11 +42,13 @@ const ChosenCharity = ({charity}) => {
     <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">{chosenCharity.charityCause}</span>
     </div>
 
+    <div className="grid md:grid-cols-1 gap-1 px-4 py-4">
     <p className="text-xl font-bold gap-1 text-center leading-loose">Add a listing</p>
     <JobForm chosenCharity = {chosenCharity}/>
 
     <p className="text-xl font-bold gap-1 text-center leading-loose">Current listings</p>
     {chosenCharityJobs ?  <ul>{chosenCharityJobs}</ul> : <p>No jobs available</p>}
+    </div>
     </>
     );
 
