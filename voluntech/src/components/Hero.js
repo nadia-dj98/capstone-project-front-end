@@ -9,7 +9,7 @@ const Hero = () => {
                     <p className='text-2xl'>Volunteer & Code</p>
                     <h1 className='py-3 text-5xl md:text-7xl font-bold'>Job Board</h1>
                     <p className='text-2xl'>Connecting Tech talent to job opportunities for social impact</p>
-                    <button className='py-3 px-6 sm:w-[60%] my-4'> Get Started</button>
+
                 </div>
                 <div>
                     <img className='w-full' src={bgImg} alt="/" />
