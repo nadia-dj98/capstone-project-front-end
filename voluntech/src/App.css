@@ -10,3 +10,7 @@
 .container {
   text-align: center;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}

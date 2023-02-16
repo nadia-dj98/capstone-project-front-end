@@ -2,6 +2,9 @@
 import skylogo from './assets/skylogo.png';
 import applelogo from './assets/applelogo.png';
 import brightnetwork from './assets/brightnetwork.jpeg';
+import lloyds from './assets/lloyds.png';
+import Airbnb_logo from './assets/Airbnb_logo.jpg'
+import google from './assets/google.png'
 import partners from './assets/partners.png';
 import React from 'react';
 
@@ -37,6 +40,26 @@ const Partners = () => {
                       <img class=" w-96 h-40" src={brightnetwork} alt="image description">
                       </img>
                    </div>
+
+                   <div className=' py-8 '>
+                    
+                    <img class=" w-96 h-40" src={lloyds} alt="image description">
+                    </img>
+                 </div>
+
+                 <div className=' py-8 '>
+                    
+                    <img class=" w-100 h-40" src={Airbnb_logo} alt="image description">
+                    </img>
+                 </div>
+
+                 <div className=' py-8 '>
+                    
+                    <img class=" w-100 h-40" src={google} alt="image description">
+                    </img>
+                 </div>
+
+
           </div>
       </div>
       </div>
