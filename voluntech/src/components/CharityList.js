@@ -6,15 +6,16 @@ const CharityList = ({charities, jobs}) => {
         return <Charity key={charity.id} charity={charity} />}
        )
        
-       
-       return ( 
-           <>
-           <h2>List of charities</h2>
-           <div>
-                {charityComponents}
-           </div>
-           </>
-        );
+    
+
+    return ( 
+        <>
+        <h2>List of charities</h2>
+        <div>
+            {charityComponents}
+        </div>
+        </>
+    );
 }
  
 export default CharityList;

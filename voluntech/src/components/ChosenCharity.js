@@ -3,13 +3,12 @@ import { useParams } from "react-router-dom";
 import JobForm from "./JobForm";
 import Job from "./Job";
 
-//map jobs to show all jobs for this particular charity (like how we've done previously)
-//need conditional rendering - (or else will show undefined.name) - because the info you're trying to use in this component does not exist when the page is loaded
-//whenever you have fetch request/asyn, this is when you need to use conditional rendering 
-
 const ChosenCharity = ({charity}) => {
+    
     let {id} = useParams();
+    
     const [chosenCharity, setChosenCharity] = useState([]);
+    
     useEffect(() => {
         fetch(`http://localhost:8080/charities/${id}`)
         .then(response => response.json())
@@ -30,16 +29,15 @@ const ChosenCharity = ({charity}) => {
     useEffect(() => {
         if (specificCharityJobs.length){
         setChosenCharityJobs(specificCharityJobs.map((job) => {
-            return <Job key={job.id} job={job}/>}
+            return <Job showVolunteers={true} key={job.id} job={job}/>}
        ))}
     }, [specificCharityJobs]);
 
     return (
     <>
-   <h1>Hello</h1> 
-   <p>{chosenCharity.name}</p>
-   <p>{chosenCharity.description}</p>
-   <p>{chosenCharity.charityCause}</p>
+    <p>{chosenCharity.name}</p>
+    <p>{chosenCharity.description}</p>
+    <p>{chosenCharity.charityCause}</p>
     <JobForm chosenCharity = {chosenCharity}/>
     <p>Job listings</p>
     {chosenCharityJobs ?  <ul>{chosenCharityJobs}</ul> : <p>No jobs available</p>}

@@ -1,4 +1,4 @@
-const Job = ({job}) => {
+const Job = ({job, showVolunteers}) => {
 
     const applyToJob = () => {
         const applicationBody = {
@@ -25,9 +25,21 @@ const Job = ({job}) => {
                  <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">{job.location}</span> 
                  
                {job.charity ? <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">{job.charity.charityCause}</span>  : "" }
-                <div>
+                <form>
                     <button onClick={applyToJob}>Apply</button>
-                </div>
+                </form>
+
+                {showVolunteers ? <ul>
+                {job.volunteers.map((volunteer, index) => {
+                    return(
+                        <li key={index}>
+                        Name: {volunteer.name}<br/>
+                        Experience: {volunteer.experience}
+                        </li>
+                    )
+                })}
+                </ul> : ""}
+
             </div>
         </div>
         </>
