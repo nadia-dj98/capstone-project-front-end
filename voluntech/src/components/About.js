@@ -7,7 +7,7 @@ import get_hired from './assets/get_hired.png';
 const About = () => {
     return ( 
         <>
-      <div name='About' className='w-full my-20'>
+      <div name='About' className='w-full h-screen my-20'>
             <div className='max-w-[1240px] mx-auto'>
                   
                   <div className='text-center'>
