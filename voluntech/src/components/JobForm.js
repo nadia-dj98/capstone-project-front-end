@@ -39,7 +39,7 @@ const JobForm = ({chosenCharity}) => {
 
 
     return ( 
-        <form onSubmit={handleFormSubmit} className="job-form name-card shadow-lg rounded-xl border-2 px-5 py-5 border-black overflow-y-scroll w-96" style={{height: '100%', width: '100%'}}>
+        <form onSubmit={handleFormSubmit} className="job-form name-card shadow-lg rounded-xl border-2 px-5 py-5 border-black w-96" style={{height: '100%', width: '100%'}}>
             <h2 className="font-bold">Role:</h2>
             <input className="rounded-xl border-2 px-1 py-1 border-black m-1" style={{width: '80%'}}
                 type = "text" 

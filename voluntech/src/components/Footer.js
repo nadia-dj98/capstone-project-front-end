@@ -1,13 +1,13 @@
 const Footer = () => {
     return ( 
         <>
-        <div clasName="flex flex-col h-screen justify-between">
+        <div clasName="flex flex-col h-screen justify-between ">
         
-            <footer className="w-full h-15 text-center text-white fixed bottom-0">
+         
                
 
 
-<footer class="p-4 bg-white sm:p-6 dark:bg-gray-900">
+<footer class="p-4 bg-white sm:p-6 dark:bg-gray-900 w-full h-15 text-center text-white">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             
@@ -17,8 +17,8 @@ const Footer = () => {
             
         </div>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700" />
-    <div class="sm:flex sm:items-center sm:justify-between">
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 " />
+    <div class="sm:flex sm:items-center sm:justify-between ">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">VOLUNTECH™</a>. All Rights Reserved.
         </span>
         <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
@@ -49,7 +49,7 @@ const Footer = () => {
 
                 
 
-            </footer> 
+           
         
         </div> 
         </>
