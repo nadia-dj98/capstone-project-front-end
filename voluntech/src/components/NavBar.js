@@ -2,12 +2,10 @@ import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import { Bars3Icon,XMarkIcon } from '@heroicons/react/24/outline'
 
-
 const NavBar = ({}) => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
-
-
+  
     // Get user from UseContext
     // If the user is not null (charity or volunteer), then render the "log out" and "welcome message"
     // If the user is null, render the "log in" and "sign up" button
@@ -23,13 +21,8 @@ const NavBar = ({}) => {
             <h1 className='text-3xl font-bold mr-4 sm:text-4xl'>VOLUNTECH</h1>
             <ul className='hidden md:flex'>
 
-    
-                  <li>  <Link to="/home">Home</Link> </li> 
-                  {/* <li>  <Link to= "/about">About</Link></li> */}
-                  <li>About</li>
+                  <li>  <Link to="/home">Home</Link></li> 
                   <li>  <Link to="/jobs">Jobs</Link> </li>
-                  {/* <li>  <Link to="/partners">Partners</Link></li> */}
-                  <li>Partners</li>
                   <li>  <Link to="/charities">Charities</Link></li>
 
               </ul>

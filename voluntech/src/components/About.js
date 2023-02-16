@@ -9,10 +9,10 @@ const About = () => {
         <>
       <div name='About' className='w-full h-screen my-20'>
             <div className='max-w-[1240px] mx-auto'>
-                  
+
                   <div className='text-center'>
-                    <h2 className='text-5xl font-bold'>Trusted by charities across the UK</h2>
-                  </div>
+                  <h2 className='text-5xl font-bold'>Trusted by charities across the UK</h2>
+               </div>
                      
                   <div className="flex items-center justify-between text-center"> 
                      

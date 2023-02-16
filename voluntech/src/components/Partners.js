@@ -16,16 +16,11 @@ const Partners = () => {
           <div className='max-w-[1240px] mx-auto'>
               <div className='text-center'>
                   <h2 className='text-5xl font-bold'>Partners</h2>
-                  {/* <img class=" w-96 h-30 my--50" src={partners} alt="image description"> */}
-                      {/* </img> */}
-
-                  
                    </div>
-                   
+         
                    <div className='grid md:grid-cols-3 gap-1 px-2'>
                       <div className=' py-8 '>
          
-                      
                     <img class=" w-96 h-30" src={skylogo} alt="image description">
                       </img>
 

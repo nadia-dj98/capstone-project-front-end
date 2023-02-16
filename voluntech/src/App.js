@@ -21,7 +21,6 @@ function App() {
 
   const [user, setUser] = useState(null);
 
- 
   const [jobs, setJobs] = useState([]);
 
     useEffect (() => {
@@ -65,8 +64,7 @@ function App() {
         {<CharityContainer jobs={jobs}/>}
         />
         <Route exact path = "/charities/:id" element = {
-          <ChosenCharity jobs={jobs}/>
-        }
+          <ChosenCharity jobs={jobs}/>}
         />
         <Route path="/login" element=
         {<LoginPage/>}
