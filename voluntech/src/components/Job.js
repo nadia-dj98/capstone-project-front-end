@@ -14,7 +14,7 @@ const Job = ({job, showVolunteers}) => {
     
     return (  
         <>
-            <div className="name-card hover:scale-110 rounded-xl border-2 px-5 py-5 border-black overflow-y-scroll" style={{height: '30vh'}}>
+            <div className="name-car hover: scale-110 shadow-lg rounded-xl border-2 px-5 py-5 m-4 border-black overflow-y-scroll" style={{height: '30vh'}}>
             <div className="job">
                 <p className = "text-lg font-bold">{job.role}</p>
                 {job.charity ? <p className="font-bold">{job.charity.name}</p> : ""}
