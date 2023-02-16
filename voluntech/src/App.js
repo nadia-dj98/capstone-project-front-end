@@ -58,6 +58,9 @@ function App() {
         <Route path= "/about" element =
         {<About/>}
         />
+        <Route path= "/partners" element =
+        {<Partners/>}
+        />
         <Route path= "/jobs" element =
         {<JobContainer jobs={jobs}/>}
         />
