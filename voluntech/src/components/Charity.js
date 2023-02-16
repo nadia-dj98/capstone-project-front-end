@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Charity = ({charity, jobs}) => {
     return ( 
         <>
-            <div className="name-card shadow-lg rounded-xl border-2 px-5 py-5 border-black overflow-y-scroll" style={{height: '30vh'}}>
+            <div className="name-card hover:scale-105 shadow-lg rounded-xl border-2 px-5 py-5 m-4 border-black overflow-y-scroll" style={{height: '30vh'}}>
                 <div className="charity">
                     <p className = "text-lg font-bold">{charity.name}</p>
                     <p>{charity.description}</p>

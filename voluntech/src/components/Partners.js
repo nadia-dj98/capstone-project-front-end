@@ -12,7 +12,7 @@ import React from 'react';
 const Partners = () => {
     return(  
     <>
-    <div name='Partners' className='w-full my-20'>
+    <div name='Partners' className='w-full h-screen my-20'>
           <div className='max-w-[1240px] mx-auto'>
               <div className='text-center'>
                   <h2 className='text-5xl font-bold'>Partners</h2>
