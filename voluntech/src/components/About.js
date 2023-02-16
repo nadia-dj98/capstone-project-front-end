@@ -22,6 +22,7 @@ const About = () => {
                       <img class="w-80 h-80" src={cause} alt="image description">
                         </img>
                         <p className='text-4xl font-bold text-indigo-600'>1. Find a cause </p>
+                        <p className='py-4 px-10'>Find like-minded people, share your skills and collaborate on causes you believe in.</p>
 
                      </div>
 
@@ -29,12 +30,14 @@ const About = () => {
                         <img class="w-85 h-80" src={shared_goals} alt="image description">
                         </img>
                         <p className='text-4xl font-bold text-indigo-600'>2. Make a difference</p>
+                        <p className='py-4 px-10'>Make a real impact building products that solve community problems, together.</p>
                      </div>
 
                      <div className='py-8'>
                         <img class="rounded-full w-85 h-80" src={get_hired} alt="image description">
                         </img>
                         <p className='text-4xl font-bold text-indigo-600'>3. Get hired</p>
+                        <p className='py-4 px-10'>Use the skills you gain from working on community products to get hired for top jobs.</p>
                      </div>
 
                </div>
