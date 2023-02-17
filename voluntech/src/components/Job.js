@@ -36,12 +36,12 @@ const Job = ({job, showVolunteers}) => {
                 </form>
                 </div>
 
-                {job.volunteers && job.volunteers.length > 0 ? <p className="font-bold text-lg	">Applicants:</p> : <p> No current applicants</p>}
                 {showVolunteers ? <ul>
                 {job.volunteers.map((volunteer, index) => {
                     return(
                         <>
                             <li key={index}>
+                                <p className="font-bold text-lg	">Applicants:</p>
                                 <span className="font-bold">Name:</span> {volunteer.name}<br/>
                                 <span className="font-bold">Experience:</span> {volunteer.experience}
                             </li>
